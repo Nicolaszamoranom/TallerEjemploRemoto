@@ -1,0 +1,218 @@
+Clase Principal
+
+package main;
+
+public class ClasePrincipal_NZM {
+	
+	public static void ClasePrincipal_NZM(String[] args) {
+		
+		ClassMano_NZM manoIzquierda_NZM = new ClassMano_NZM("Izquierda");
+        ClassMano_NZM manoDerecha_NZM = new ClassMano_NZM("Derecha");
+        ClassPierna_NZM piernaIzquierda_NZM = new ClassPierna_NZM("Izquierda", 3);
+        ClassPierna_NZM piernaDerecha_NZM = new ClassPierna_NZM("Derecha", 3);
+        ClassTorso_NZM torso_NZM = new ClassTorso_NZM(12, "Humano");
+        ClassCabeza_NZM cabeza_NZM = new ClassCabeza_NZM("Humana", "Verdes");
+		
+        ClassRobot_NZM robot_NZM = new ClassRobot_NZM(manoIzquierda_NZM, manoDerecha_NZM, piernaIzquierda_NZM, piernaDerecha_NZM, torso_NZM, cabeza_NZM);
+        robot_NZM.mostrarComponentes();
+        robot_NZM.realizarAcciones();
+        
+        ClassOutfit_NZM ClassTrajeGon_NZM = new ClassTrajeGon_NZM();
+        ClassOutfit_NZM ClassTrajeFlash_NZM = new ClassTrajeFlash_NZM();
+        
+	}
+
+}
+
+
+
+Clase Cabeza:
+
+package main;
+
+public class ClasePrincipal_NZM {
+	
+	public static void ClasePrincipal_NZM(String[] args) {
+		
+		ClassMano_NZM manoIzquierda_NZM = new ClassMano_NZM("Izquierda");
+        ClassMano_NZM manoDerecha_NZM = new ClassMano_NZM("Derecha");
+        ClassPierna_NZM piernaIzquierda_NZM = new ClassPierna_NZM("Izquierda", 3);
+        ClassPierna_NZM piernaDerecha_NZM = new ClassPierna_NZM("Derecha", 3);
+        ClassTorso_NZM torso_NZM = new ClassTorso_NZM(12, "Humano");
+        ClassCabeza_NZM cabeza_NZM = new ClassCabeza_NZM("Humana", "Verdes");
+		
+        ClassRobot_NZM robot_NZM = new ClassRobot_NZM(manoIzquierda_NZM, manoDerecha_NZM, piernaIzquierda_NZM, piernaDerecha_NZM, torso_NZM, cabeza_NZM);
+        robot_NZM.mostrarComponentes();
+        robot_NZM.realizarAcciones();
+        
+        ClassOutfit_NZM ClassTrajeGon_NZM = new ClassTrajeGon_NZM();
+        ClassOutfit_NZM ClassTrajeFlash_NZM = new ClassTrajeFlash_NZM();
+        
+	}
+
+}
+
+
+Clase Mano
+
+package main;
+
+public class ClasePrincipal_NZM {
+	
+	public static void ClasePrincipal_NZM(String[] args) {
+		
+		ClassMano_NZM manoIzquierda_NZM = new ClassMano_NZM("Izquierda");
+        ClassMano_NZM manoDerecha_NZM = new ClassMano_NZM("Derecha");
+        ClassPierna_NZM piernaIzquierda_NZM = new ClassPierna_NZM("Izquierda", 3);
+        ClassPierna_NZM piernaDerecha_NZM = new ClassPierna_NZM("Derecha", 3);
+        ClassTorso_NZM torso_NZM = new ClassTorso_NZM(12, "Humano");
+        ClassCabeza_NZM cabeza_NZM = new ClassCabeza_NZM("Humana", "Verdes");
+		
+        ClassRobot_NZM robot_NZM = new ClassRobot_NZM(manoIzquierda_NZM, manoDerecha_NZM, piernaIzquierda_NZM, piernaDerecha_NZM, torso_NZM, cabeza_NZM);
+        robot_NZM.mostrarComponentes();
+        robot_NZM.realizarAcciones();
+        
+        ClassOutfit_NZM ClassTrajeGon_NZM = new ClassTrajeGon_NZM();
+        ClassOutfit_NZM ClassTrajeFlash_NZM = new ClassTrajeFlash_NZM();
+        
+	}
+
+}
+
+
+Clase Outfit
+
+package main;
+
+public class ClassOutfit_NZM {
+
+	public void aplicar(ClassRobot_NZM robot_NZM) {
+        System.out.println("Aplicando outfit genérico al robot.");
+	
+	}
+}
+
+Clase Pierna
+
+package main;
+
+public class ClassPierna_NZM {
+	
+	private String Lado_NZM;
+	private int articulaciones_NZM;
+	
+	public ClassPierna_NZM(String Lado_NZM, int articulaciones_NZM) {
+		
+		this.Lado_NZM = Lado_NZM;
+		this.articulaciones_NZM = articulaciones_NZM;
+		
+	}
+	
+	public void caminar_NZM() {
+		
+		System.out.println("Caminar con pierda" + Lado_NZM + ".");		
+	}
+
+	public String toString() {
+		
+		return "Pierna" + Lado_NZM + " con " + articulaciones_NZM + "articulaciones.";
+	}
+	
+}	
+
+
+Clase Robot
+
+package main;
+
+public class ClassRobot_NZM {
+
+	private ClassMano_NZM manoIzquierda_NZM;
+    private ClassMano_NZM manoDerecha_NZM;
+    private ClassPierna_NZM piernaIzquierda_NZM;
+    private ClassPierna_NZM piernaDerecha_NZM;
+    private ClassTorso_NZM torso_NZM;
+    private ClassCabeza_NZM cabeza_NZM;
+
+    public ClassRobot_NZM(ClassMano_NZM manoIzquierda_NZM, ClassMano_NZM manoDerecha_NZM, ClassPierna_NZM piernaIzquierda_NZM, ClassPierna_NZM piernaDerecha_NZM, ClassTorso_NZM torso_NZM, ClassCabeza_NZM cabeza_NZM) {
+        this.manoIzquierda_NZM = manoIzquierda_NZM;
+        this.manoDerecha_NZM = manoDerecha_NZM;
+        this.piernaIzquierda_NZM = piernaIzquierda_NZM;
+        this.piernaDerecha_NZM = piernaDerecha_NZM;
+        this.torso_NZM = torso_NZM;
+        this.cabeza_NZM = cabeza_NZM;
+    }
+
+    public void mostrarComponentes() {
+        System.out.println(manoIzquierda_NZM);
+        System.out.println(manoDerecha_NZM);
+        System.out.println(piernaIzquierda_NZM);
+        System.out.println(piernaDerecha_NZM);
+        System.out.println(torso_NZM);
+        System.out.println(cabeza_NZM);
+    }
+
+    public void realizarAcciones() {
+        manoIzquierda_NZM.moverDedos_NZM();
+        manoDerecha_NZM.moverDedos_NZM();
+        piernaIzquierda_NZM.caminar_NZM();
+        piernaDerecha_NZM.caminar_NZM();
+        torso_NZM.rotar_NZM();
+        cabeza_NZM.girarCabeza_NZM();
+    }
+	
+}
+
+
+Clase Torso
+
+package main;
+
+public class ClassTorso_NZM {
+
+	private int cantidadDeCostillas_NZM;
+    private String tipo_NZM;
+
+    public ClassTorso_NZM(int cantidadDeCostillas_NZM, String tipo_NZM) {
+        this.cantidadDeCostillas_NZM = cantidadDeCostillas_NZM;
+        this.tipo_NZM = tipo_NZM;
+    }
+
+    public void rotar_NZM() {
+        System.out.println("Rotando el torso.");
+    }
+
+    
+    public String toString() {
+        return "Torso: " + tipo_NZM + " con " + cantidadDeCostillas_NZM + " costillas.";
+    }
+}
+	
+
+
+Clase Traje Flash
+
+package main;
+
+public class ClassTrajeFlash_NZM extends ClassOutfit_NZM {
+
+	public void aplicar(ClassRobot_NZM robot_NZM) {
+		
+		System.out.println("Equipando traje de flash.");
+	}
+	
+}
+
+
+Clase Traje Gon
+
+package main;
+
+public class ClassTrajeGon_NZM extends ClassOutfit_NZM {
+
+	public void aplicar(ClassRobot_NZM robot_NZM) {
+		
+		System.out.println("Equipando traje de GOM.");
+	}
+	
+}
